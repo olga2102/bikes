@@ -1,0 +1,23 @@
+.sale {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sale__wrapper {
+  width: 35%;
+}
+
+.sale__wrapper h2 {
+  font-weight: bold;
+  font-size: 46px;
+  line-height: 64px;
+  color: $basic-white;
+}
+
+.sale__wrapper p {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  color: $basic-white;
+  opacity: 0.8;
+}

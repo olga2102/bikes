@@ -1,0 +1,25 @@
+.header {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-image: url("../img/bike.jpg");
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  // background-size: 779px;
+  background-color: $background-grey;
+  min-height: 825px;
+}
+
+.header__wrapper {
+  margin: 1% 6%;
+}
+
+.header__wrapper button {
+  display: none;
+}
+
+.header__logo {
+  position: absolute;
+  top: 35%;
+  left: 8%;
+}
