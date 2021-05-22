@@ -1,16 +1,44 @@
 .sale {
   display: flex;
   justify-content: space-between;
+  // margin: 0 19.5%;
+  background-image: url("../img/bike.jpg");
+  background-repeat: no-repeat;
+  background-color: $background-grey;
+  background-position-x: center;
+  background-size: cover;
+  min-height: 825px;
+  padding-top: 300px;
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/bike_tablet.jpg");
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: auto;
+    background-size: contain;
+    background-color: transparent;
+    padding-top: 70px;
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/bike_mobile.jpg");
+  }
+}
+
+.sale__inner {
+  display: flex;
+  justify-content: space-between;
   margin: 0 19.5%;
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: 0 11.5%;
   }
 
   @media (max-width: $mobile-width) {
-    margin: 0 5%;
+    flex-direction: column;
+    margin: 0 4.5%;
   }
 }
 

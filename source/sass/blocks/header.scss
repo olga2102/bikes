@@ -1,23 +1,29 @@
 .header {
-  position: relative;
+  position: absolute;
+  // background-color: black;
   width: 100%;
-  overflow: hidden;
-  background-image: url("../img/bike.jpg");
-  background-repeat: no-repeat;
-  background-color: $background-grey;
-  background-position-x: center;
-  min-height: 825px;
+  // background-image: url("../img/bike.jpg");
+  // background-repeat: no-repeat;
+  // background-color: $background-grey;
+  // // background-position-x: center;
+  // background-size: cover;
+  // min-height: 825px;
+
+  // @media (max-width: $tablet-width) {
+  //   background-image: url("../img/bike_tablet.jpg");
+  //   background-color: $basic-white;
+  //   // min-height: 700px;
+  //   background-size: contain;
+  // }
+
+  // @media (max-width: $mobile-width) {
+  //   background-image: url("../img/bike_mobile.jpg");
+  //   background-color: $basic-white;
+  //   min-height: 780px;
+  // }
 
   @media (max-width: $tablet-width) {
-    background-image: url("../img/bike_tablet.jpg");
-    background-color: $basic-white;
-    min-height: 700px;
-  }
-
-  @media (max-width: $mobile-width) {
-    background-image: url("../img/bike_mobile.jpg");
-    background-color: $basic-white;
-    min-height: 780px;
+    position: initial;
   }
 }
 
@@ -29,7 +35,7 @@
     justify-content: space-between;
     margin: 0;
     flex-wrap: wrap;
-    margin-bottom: 74px;
+    // margin-bottom: 74px;
   }
 
   @media (max-width: $mobile-width) {
@@ -50,7 +56,7 @@
 
 .header__logo {
   position: absolute;
-  top: 38%;
+  top: 380%;
   left: 20%;
 
   @media (max-width: $tablet-width) {
