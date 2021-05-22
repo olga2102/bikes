@@ -4,22 +4,57 @@
   overflow: hidden;
   background-image: url("../img/bike.jpg");
   background-repeat: no-repeat;
-  background-position-x: 50%;
-  // background-size: 779px;
   background-color: $background-grey;
+  background-position-x: center;
   min-height: 825px;
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/bike_tablet.jpg");
+    background-color: $basic-white;
+    min-height: 700px;
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/bike_mobile.jpg");
+    background-color: $basic-white;
+    min-height: 780px;
+  }
 }
 
 .header__wrapper {
-  margin: 1% 6%;
+  margin: 1% 19.5%;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    flex-wrap: wrap;
+    margin-bottom: 74px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 30px;
+  }
 }
 
-.header__wrapper button {
-  display: none;
-}
+// .header__wrapper button {
+//   @include button-reset;
+//   display: none;
+//   position: relative;
+
+//   @media (max-width: $tablet-width) {
+//     display: block;
+//     // background-color: $blue;
+//   }
+// }
 
 .header__logo {
   position: absolute;
-  top: 35%;
-  left: 8%;
+  top: 38%;
+  left: 20%;
+
+  @media (max-width: $tablet-width) {
+    position: static;
+    padding: 25px 20px;
+  }
 }
