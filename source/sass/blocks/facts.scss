@@ -1,3 +1,11 @@
+.facts {
+  margin-bottom: 150px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 70px;
+  }
+}
+
 .facts h2 {
   font-weight: 600;
   font-size: 30px;
