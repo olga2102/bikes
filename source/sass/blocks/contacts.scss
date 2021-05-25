@@ -38,7 +38,7 @@
   font-size: 17px;
   line-height: 31px;
   text-align: center;
-  margin: 0 427px 42px;
+  margin: 0 30% 42px;
 
   @media (max-width: $tablet-width) {
     margin: 0 0 20px;
@@ -50,11 +50,12 @@
   }
 }
 
-.contacts div {
+.contacts__map {
   margin: 0 auto;
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: $background-blue;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/map@2x.jpg");
@@ -81,7 +82,7 @@
   }
 }
 
-.contacts div iframe {
+.contacts__map iframe {
   border: 0;
 
   @media (max-width: $tablet-width) {

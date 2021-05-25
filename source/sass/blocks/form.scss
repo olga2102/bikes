@@ -6,13 +6,15 @@
   margin-left: auto;
 
   @media (max-width: $tablet-width) {
-    margin: 200px auto 0;
+    margin: 10.5% auto 0;
     width: 55%;
   }
 
   @media (max-width: $mobile-width) {
-    margin: 120px auto;
+    margin: 70px auto;
     width: 100%;
+    max-width: 400px;
+    padding: 0 16px;
   }
 }
 
@@ -34,6 +36,7 @@
     font-size: 18px;
     line-height: 28px;
     color: $basic-black;
+    margin-bottom: 30px;
   }
 
   @media (max-width: $mobile-width) {

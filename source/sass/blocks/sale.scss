@@ -1,35 +1,71 @@
 .sale {
+  position: relative;
   display: flex;
   justify-content: space-between;
+  max-width: 875px;
+  margin: 0 auto;
   // margin: 0 19.5%;
-  background-image: url("../img/bike.jpg");
-  background-repeat: no-repeat;
-  background-color: $background-grey;
-  background-position-x: center;
-  background-size: cover;
-  min-height: 825px;
-  padding-top: 300px;
+  // background-image: url("../img/bike.jpg");
+  // background-repeat: no-repeat;
+  // background-color: $background-grey;
+  // background-position-x: center;
+  // background-size: cover;
+  // min-height: 825px;
+  // padding-top: 300px;
+  // z-index: -2;
+
+  // @media (min-resolution: 2dppx) {
+  //   background-image: url("../img/bike@2x.jpg");
+  // }
 
   @media (max-width: $tablet-width) {
-    background-image: url("../img/bike_tablet.jpg");
+    // background-image: url("../img/bike_tablet.jpg");
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: auto;
-    background-size: contain;
-    background-color: transparent;
-    padding-top: 70px;
+    // background-size: contain;
+    // background-color: transparent;
+    // padding-top: 70px;
+    // z-index: 1;
+
+    // @media (min-resolution: 2dppx) {
+    //   background-image: url("../img/bike_tablet@2x.jpg");
+    // }
   }
 
-  @media (max-width: $mobile-width) {
-    background-image: url("../img/bike_mobile.jpg");
-  }
+  // @media (max-width: $mobile-width) {
+  //   background-image: url("../img/bike_mobile.jpg");
+
+  //   @media (min-resolution: 2dppx) {
+  //     background-image: url("../img/bike_mobile@2x.jpg");
+  //   }
+  // }
+
+  // &::before {
+  //   @media (max-width: $tablet-width) {
+  //     position: absolute;
+  //     content: "";
+  //     width: 100%;
+  //     height: 340px;
+  //     background-color: $background-grey;
+  //     top: 0;
+  //     z-index: -5;
+  //   }
+
+  //   @media (max-width: $mobile-width) {
+  //     height: 390px;
+  //   }
+  // }
 }
 
 .sale__inner {
   display: flex;
   justify-content: space-between;
-  margin: 0 19.5%;
+  // margin: 0 19.5%;
+  margin: 0 auto;
+  padding: 0 2%;
+  max-width: 950px;
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
@@ -47,6 +83,29 @@
 
   @media (max-width: $tablet-width) {
     width: 100%;
+
+    &--picture {
+      background-image: url("../img/bike_tablet.jpg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: $background-grey;
+      min-height: 340px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/bike_tablet@2x.jpg");
+      }
+    }
+  }
+
+  &--picture {
+    @media (max-width: $mobile-width) {
+      background-image: url("../img/bike_mobile.jpg");
+      min-height: 390px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/bike_mobile@2x.jpg");
+      }
+    }
   }
 }
 
@@ -63,21 +122,24 @@
     font-size: 30px;
     line-height: 42px;
     text-align: center;
+    margin-top: 134px;
     margin-bottom: 25px;
   }
 }
 
 .sale__wrapper p {
+  max-width: 435px;
   font-weight: 300;
   font-size: 20px;
   line-height: 32px;
   color: $basic-white;
   opacity: 0.8;
-  margin: 0;
+  margin: 0 auto;
 
   @media (max-width: $tablet-width) {
     font-size: 18px;
     line-height: 32px;
     text-align: center;
+    padding: 0 20px;
   }
 }
