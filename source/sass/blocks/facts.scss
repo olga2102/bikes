@@ -1,8 +1,8 @@
 .facts {
-  margin-bottom: 150px;
+  margin-bottom: 133px;
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 70px;
+    margin-bottom: 0;
   }
 }
 
@@ -17,6 +17,11 @@
   @media (max-width: $tablet-width) {
     font-size: 24px;
     line-height: 41px;
+    margin-bottom: 57px;
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 73px;
+    }
   }
 }
 
@@ -26,11 +31,12 @@
   flex-wrap: wrap;
   justify-content: space-between;
   counter-reset: list;
-  max-width: 1100px;
+  max-width: 1160px;
+  padding-top: 10px;
   margin: 0 auto;
 
   @media (max-width: $tablet-width) {
-    max-width: 590px;
+    max-width: 570px;
   }
 
   @media (max-width: $mobile-width) {
@@ -49,30 +55,48 @@
   text-align: center;
   margin: 20px 0;
 
+  &:not(:last-child) {
+    margin-left: 10px;
+  }
+
   @media (max-width: $tablet-width) {
     width: 45%;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
   }
 
   @media (max-width: $mobile-width) {
     width: 100%;
-    margin: 0 0 70px 0;
+    max-width: 288px;
+    font-size: 18px;
+    line-height: 34px;
+    margin: 0 0 39px 0;
+    padding: 0 8px 50px;
   }
 
   &::before {
     position: absolute;
     counter-increment: list;
     content: "0" counter(list);
-    top: -45px;
+    top: -52px;
     left: 50%;
     transform: translateX(-50%);
     font-weight: bold;
     font-size: 28px;
     line-height: 38px;
     color: $blue;
+
+    @media (max-width: $mobile-width) {
+      top: -49px;
+    }
   }
 }
 
 .facts p {
   margin: 0;
+}
+
+.facts br {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }

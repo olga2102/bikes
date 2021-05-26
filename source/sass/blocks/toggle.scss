@@ -8,12 +8,9 @@
   height: 50px;
   z-index: 2;
 
-  // @media (max-width: $tablet-width) {
-  //   display: flex;
-  // }
   // Кнопка при закрытом состоянии меню
   &--closed {
-      @media (max-width: $tablet-width) {
+    @media (max-width: $tablet-width) {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -58,7 +55,20 @@
     }
   }
 
+  // Кнопка при открытом состоянии меню
   &--no-js {
     display: none;
+  }
+
+  &:focus {
+    outline: 2px solid $basic-black;
+  }
+
+  &:hover {
+    background-color: $blue-hover;
+  }
+
+  &:active {
+    background-color: $blue-active;
   }
 }

@@ -1,16 +1,19 @@
 .video {
   position: relative;
-  background: linear-gradient(to bottom, $background-black 85%, $basic-white 15%);
+  background: linear-gradient(to bottom, $background-black 88%, $basic-white 12%);
   padding-top: 120px;
   margin-bottom: 150px;
 
   @media (max-width: $tablet-width) {
     padding-top: 70px;
     margin-bottom: 70px;
+    background: linear-gradient(to bottom, $background-black 83%, $basic-white 17%);
   }
 
   @media (max-width: $mobile-width) {
     padding-top: 84px;
+    background: linear-gradient(to bottom, $background-black 89%, $basic-white 11%);
+    margin-bottom: 72px;
   }
 }
 
@@ -36,14 +39,15 @@
   color: $opacity-white;
   max-width: 340px;
   margin: 0 auto 56px;
-  padding: 0 15px;
 
   @media (max-width: $tablet-width) {
     margin: 0 auto 40px;
+    max-width: 425px;
   }
 
   @media (max-width: $mobile-width) {
     margin: 0 auto 50px;
+    padding: 0 5px;
   }
 }
 
@@ -69,7 +73,7 @@
   height: 65px;
   background-color: $blue;
   border-radius: 50%;
-  top: 65%;
+  top: 64%;
   left: 50%;
   transform: translateX(-50%);
 
@@ -105,5 +109,13 @@
       border-width: 0 8.5px 13px 8.5px;
       left: 45%;
     }
+  }
+
+  &:hover {
+    background-color: $blue-hover;
+  }
+
+  &:active {
+    background-color: $blue-active;
   }
 }
