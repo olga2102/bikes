@@ -12,4 +12,9 @@
   flex-direction: column;
   justify-content: space-between;
   margin: 0;
+
+  &--lock {
+    // position: fixed;
+    overflow: hidden;
+  }
 }

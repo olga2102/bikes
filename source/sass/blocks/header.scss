@@ -1,66 +1,32 @@
 .header {
-  // position: absolute;
-  // background-color: black;
-  // width: 100%;
   margin-bottom: 127px;
   background-image: url("../img/bike.jpg");
   background-repeat: no-repeat;
   background-color: $background-grey;
-  // background-position-x: center;
   background-size: cover;
   min-height: 825px;
 
   @media (max-width: $tablet-width) {
     background-image: none;
-    // background-image: url("../img/bike_tablet.jpg");
     background-color: $basic-white;
-    // min-height: 700px;
-    // background-size: contain;
     min-height: auto;
     margin-bottom: 50px;
   }
-
-  @media (max-width: $mobile-width) {
-    // background-image: url("../img/bike_mobile.jpg");
-    // background-color: $basic-white;
-    // min-height: 780px;
-  }
-
-  // @media (max-width: $tablet-width) {
-  //   position: initial;
-  // }
 }
 
 .header__wrapper {
-  // margin: 1% 19.5%;
   max-width: 875px;
   margin: 0 auto;
   position: relative;
-  // top: 25px;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
 
   @media (max-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     margin: 0;
     flex-wrap: wrap;
-    // margin-bottom: 74px;
     min-width: 100%;
-    // height: 100vh;
   }
 }
-
-// .header__wrapper button {
-//   @include button-reset;
-//   display: none;
-//   position: relative;
-
-//   @media (max-width: $tablet-width) {
-//     display: block;
-//     // background-color: $blue;
-//   }
-// }
 
 .header__logo {
   position: absolute;
@@ -68,7 +34,6 @@
   left: 0;
 
   @media (max-width: $tablet-width) {
-    // position: static;
     padding: 25px 20px;
   }
 }

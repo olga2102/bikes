@@ -4,65 +4,18 @@
   justify-content: space-between;
   max-width: 875px;
   margin: 0 auto;
-  // margin: 0 19.5%;
-  // background-image: url("../img/bike.jpg");
-  // background-repeat: no-repeat;
-  // background-color: $background-grey;
-  // background-position-x: center;
-  // background-size: cover;
-  // min-height: 825px;
-  // padding-top: 300px;
-  // z-index: -2;
-
-  // @media (min-resolution: 2dppx) {
-  //   background-image: url("../img/bike@2x.jpg");
-  // }
 
   @media (max-width: $tablet-width) {
-    // background-image: url("../img/bike_tablet.jpg");
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: auto;
-    // background-size: contain;
-    // background-color: transparent;
-    // padding-top: 70px;
-    // z-index: 1;
-
-    // @media (min-resolution: 2dppx) {
-    //   background-image: url("../img/bike_tablet@2x.jpg");
-    // }
   }
-
-  // @media (max-width: $mobile-width) {
-  //   background-image: url("../img/bike_mobile.jpg");
-
-  //   @media (min-resolution: 2dppx) {
-  //     background-image: url("../img/bike_mobile@2x.jpg");
-  //   }
-  // }
-
-  // &::before {
-  //   @media (max-width: $tablet-width) {
-  //     position: absolute;
-  //     content: "";
-  //     width: 100%;
-  //     height: 340px;
-  //     background-color: $background-grey;
-  //     top: 0;
-  //     z-index: -5;
-  //   }
-
-  //   @media (max-width: $mobile-width) {
-  //     height: 390px;
-  //   }
-  // }
 }
 
 .sale__inner {
   display: flex;
   justify-content: space-between;
-  // margin: 0 19.5%;
   margin: 0 auto;
   padding: 0 2%;
   max-width: 950px;
