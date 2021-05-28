@@ -1,48 +1,48 @@
-"use strict";
+// "use strict";
 
 const menu = document.querySelector(".main-nav");
-const openMenuButton = document.querySelector(".toggle");
+const menuButton = document.querySelector(".toggle");
 const form = document.querySelector(".form");
-const inputTel = document.querySelectorAll("#tel");
-const inputName = document.querySelectorAll("#name");
+const inputTel = document.querySelector("#tel");
+const inputName = document.querySelector("#name");
 const body = document.querySelector(".page__body");
+const link = document.querySelectorAll(".main-nav__link");
 
-function getBodyScrollTop() {
-  return self.pageYOffset || (document.documentElement && document.documentElement.ScrollTop) || (document.body && document.body.scrollTop);
+const closedMenu = () => {
+  menuButton.classList.add("toggle--closed");
+  menu.classList.remove("main-nav--open");
 }
 
-//открытие/закрытие меню
-openMenuButton.classList.add("toggle--closed");
-menu.classList.remove("main-nav--open");
+closedMenu();
 
-openMenuButton.addEventListener("click", function () {
-
-  openMenuButton.classList.toggle("toggle--closed");
-  openMenuButton.classList.toggle("toggle--opened");
-  console.log(getBodyScrollTop());
-  // body.dataset.scrollY = getBodyScrollTop(); // сохраним значение скролла
-  // body.style.top = `-${body.dataset.scrollY}px`;
-
-  menu.classList.toggle("main-nav--open");
-  // body.classList.add("page__body--lock");
+//переключение меню
+menuButton.addEventListener("click", () => {
+  if (menuButton.classList.contains('toggle--closed')) { // меню закрыто
+    body.classList.add("page__body--lock");
+    menu.classList.add("main-nav--open");
+    menuButton.classList.remove("toggle--closed");
+    menuButton.classList.add("toggle--opened");
+  } else if (menuButton.classList.contains("toggle--opened")) { // меню закрыто
+      body.classList.remove("page__body--lock");
+      menu.classList.remove("main-nav--open");
+      menuButton.classList.remove("toggle--opened");
+      menuButton.classList.add("toggle--closed");
+  }
 });
 
-// //хранение данных
-// form.addEventListener("submit", function (evt) {
-//   if (!inputTel.value || !inputName.value) {
-//     evt.preventDefault();
-//   } else {
-//     localStorage.setItem("tel", inputTel.value);
-//     localStorage.setItem("email", inputName.value);
-//   }
-// });
+//блокировка скролла
+for(let i = 0; i < link.length; i++) {
+link[i].addEventListener("click", () => {
+  body.classList.remove("page__body--lock");
+});
+}
 
-// openMenuButton.addEventListener('click', function (evt) {
-//   evt.preventDefault()
-
-//   body.dataset.scrollY = getBodyScrollTop() // сохраним значение скролла
-//   body.style.top = `-${body.dataset.scrollY}px`
-
-//   menu.classList.toggle("main-nav--open")
-//   body.classList.toggle("page__body--lock")
-// })
+//хранение данных
+form.addEventListener("submit", (evt) => {
+  if (!inputTel.value || !inputName.value) {
+    evt.preventDefault();
+  } else {
+    localStorage.setItem("tel", inputTel.value);
+    localStorage.setItem("email", inputName.value);
+  }
+});

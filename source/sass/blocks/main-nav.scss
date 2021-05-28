@@ -72,6 +72,8 @@
   color: $opacity-white;
 
   @media (max-width: $tablet-width) {
+    display: block;
+    width: 100%;
     font-size: 20px;
     line-height: 140%;
     color: $font-grey;
