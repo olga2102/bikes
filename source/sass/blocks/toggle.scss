@@ -55,11 +55,6 @@
     }
   }
 
-  // Кнопка отсутствует, меню открыто без джс
-  &--no-js {
-    display: none;
-  }
-
   &:focus {
     outline: 2px solid $basic-black;
   }

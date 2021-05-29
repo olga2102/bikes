@@ -1,5 +1,3 @@
-// "use strict";
-
 const menu = document.querySelector(".main-nav");
 const menuButton = document.querySelector(".toggle");
 const form = document.querySelector(".form");
