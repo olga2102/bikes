@@ -3,14 +3,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 20px;
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 31px;
+    margin-bottom: 27px;
   }
 }
 

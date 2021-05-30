@@ -7,22 +7,20 @@
   @media (max-width: $tablet-width) {
     padding-bottom: 50px;
   }
-
-  @media (max-width: $mobile-width) {
-    flex-direction: column;
-  }
 }
 
-.footer__wrapper a {
+.footer__link {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 16px;
   line-height: 22px;
   color: $link-grey;
+  padding: 0 0 0 25px;
 
   &:not(:last-child) {
-    margin-right: 80px;
+    margin-right: 103px;
 
     @media (max-width: $mobile-width) {
       margin-right: 0;
@@ -37,8 +35,24 @@
   &:active {
     color: $basic-black;
   }
-}
 
-.footer__wrapper a svg {
-  margin-right: 26px;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 0;
+  }
+
+  &--tel::before {
+    width: 22px;
+    height: 24px;
+    background: url("../img/phone.svg") 0 0;
+  }
+
+  &--mail::before {
+    width: 26px;
+    height: 20px;
+    background: url("../img/email.svg") 0 0;
+  }
 }

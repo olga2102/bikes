@@ -29,7 +29,7 @@
   @include list-reset;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   counter-reset: list;
   max-width: 1160px;
   padding-top: 10px;
@@ -49,19 +49,22 @@
 .facts li {
   position: relative;
   max-width: 270px;
-  width: 23%;
+  width: 22%;
   font-size: 22px;
   line-height: 34px;
   text-align: center;
-  margin: 20px 0;
+  margin-top: 20px;
+  margin-right: 40px;
+  margin-bottom: 20px;
 
-  &:not(:last-child) {
-    margin-left: 10px;
+  &:last-child {
+    margin-right: 0;
   }
 
   @media (max-width: $tablet-width) {
-    width: 45%;
+    width: 47%;
     padding-bottom: 50px;
+    margin-right: 17px;
   }
 
   @media (max-width: $mobile-width) {
@@ -79,7 +82,7 @@
     content: "0" counter(list);
     top: -52px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-38%);
     font-weight: bold;
     font-size: 28px;
     line-height: 38px;
@@ -93,10 +96,4 @@
 
 .facts p {
   margin: 0;
-}
-
-.facts br {
-  @media (max-width: $tablet-width) {
-    display: none;
-  }
 }

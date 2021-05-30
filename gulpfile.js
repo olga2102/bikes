@@ -6,13 +6,14 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
 const rename = require("gulp-rename");
-const htmlmin = require("gulp-htmlmin");
-const uglify = require('gulp-uglify-es').default;
+// const htmlmin = require("gulp-htmlmin");
+// const uglify = require('gulp-uglify-es').default;
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
+const concat = require('gulp-concat');
 
 // Styles
 
@@ -36,14 +37,12 @@ exports.styles = styles;
 
 const html = () => {
   return gulp.src("source/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 };
 
 const scripts = () => {
-  return gulp.src("source/js/main.js")
-    .pipe(uglify())
-    .pipe(rename("main.min.js"))
+  return gulp.src("source/js/*.js")
+    .pipe(concat('main.js'))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 };
@@ -88,7 +87,6 @@ exports.sprite = sprite;
 const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff2,woff}",
-    "source/img/**/*.{jpg,png,svg}",
   ], {
     base: "source",
   })

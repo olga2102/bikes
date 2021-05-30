@@ -47,7 +47,7 @@
   }
 }
 
-.types__list li {
+.types__item {
   position: relative;
   z-index: 1;
 
@@ -185,7 +185,7 @@
   }
 }
 
-.types__list img {
+.types__item img {
   @media (max-width: $tablet-width) {
     width: 270px;
     height: 300px;
@@ -199,7 +199,7 @@
   }
 }
 
-.types li:nth-child(3) img {
+.types__item:nth-child(3n) img {
   object-position: 50% 90%;
 }
 

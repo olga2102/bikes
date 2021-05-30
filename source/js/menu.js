@@ -1,10 +1,7 @@
 const menu = document.querySelector(".main-nav");
 const menuButton = document.querySelector(".toggle");
-const form = document.querySelector(".form");
-const inputTel = document.querySelector("#tel");
-const inputName = document.querySelector("#name");
 const body = document.querySelector(".page__body");
-const link = document.querySelectorAll(".main-nav__link");
+const links = document.querySelectorAll(".main-nav__link");
 
 const closedMenu = () => {
   menuButton.classList.add("toggle--closed");
@@ -29,18 +26,8 @@ menuButton.addEventListener("click", () => {
 });
 
 //блокировка скролла
-for(let i = 0; i < link.length; i++) {
-link[i].addEventListener("click", () => {
-  body.classList.remove("page__body--lock");
-});
-}
-
-//хранение данных
-form.addEventListener("submit", (evt) => {
-  if (!inputTel.value || !inputName.value) {
-    evt.preventDefault();
-  } else {
-    localStorage.setItem("tel", inputTel.value);
-    localStorage.setItem("email", inputName.value);
-  }
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    body.classList.remove("page__body--lock");
+  });
 });
