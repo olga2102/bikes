@@ -1,8 +1,8 @@
-.form {
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 78%;
+  width: 37.5%;
   margin-left: auto;
   padding-top: 5px;
 
@@ -19,12 +19,12 @@
   }
 }
 
-.form fieldset {
-  border: none;
-  padding: 0;
+form label {
+  width: 100%;
 }
 
-.form p {
+form p {
+  color: $basic-white;
   font-weight: 600;
   font-size: 17px;
   line-height: 28px;
@@ -32,6 +32,7 @@
   opacity: 1;
   padding: 0;
   margin-bottom: 20px;
+  margin-top: 0;
 
   @media (max-width: $tablet-width) {
     font-size: 18px;
@@ -46,12 +47,12 @@
   }
 }
 
-.form input {
+form input {
   width: 100%;
   font-size: 15px;
   line-height: 24px;
   margin-bottom: 19px;
-  padding: 12px 25px 10px;
+  padding: 13px 30px 10px;
   border: 1px solid $border-grey;
   border-radius: 6px;
 
@@ -60,7 +61,7 @@
   }
 }
 
-.form button {
+form button {
   font-weight: 600;
   font-size: 15px;
   line-height: 21px;

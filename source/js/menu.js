@@ -26,8 +26,14 @@ menuButton.addEventListener("click", () => {
 });
 
 //блокировка скролла
-links.forEach(link => {
-  link.addEventListener("click", () => {
-    body.classList.remove("page__body--lock");
+const scrollLock = () => {
+  if (links && links.length > 0) {
+    links.forEach(link => {
+    link.addEventListener("click", () => {
+      body.classList.remove("page__body--lock");
+    });
   });
-});
+  }
+};
+
+scrollLock();

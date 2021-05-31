@@ -254,59 +254,60 @@ img {
       text-align: center;
       padding: 0 20px; } }
 
-.form {
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 78%;
+  width: 37.5%;
   margin-left: auto;
   padding-top: 5px; }
   @media (max-width: 1023px) {
-    .form {
+    form {
       margin: 8.5% auto 0;
       width: 43%; } }
   @media (max-width: 767px) {
-    .form {
+    form {
       margin: 70px auto 0;
       width: 100%;
       max-width: 400px;
       padding: 0 16px; } }
 
-.form fieldset {
-  border: none;
-  padding: 0; }
+form label {
+  width: 100%; }
 
-.form p {
+form p {
+  color: white;
   font-weight: 600;
   font-size: 17px;
   line-height: 28px;
   text-align: center;
   opacity: 1;
   padding: 0;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  margin-top: 0; }
   @media (max-width: 1023px) {
-    .form p {
+    form p {
       font-size: 18px;
       line-height: 28px;
       color: black;
       margin-bottom: 30px; } }
   @media (max-width: 767px) {
-    .form p {
+    form p {
       padding: 0 5%;
       margin-bottom: 20px; } }
 
-.form input {
+form input {
   width: 100%;
   font-size: 15px;
   line-height: 24px;
   margin-bottom: 19px;
-  padding: 12px 25px 10px;
+  padding: 13px 30px 10px;
   border: 1px solid #c9ccd4;
   border-radius: 6px; }
-  .form input:hover {
+  form input:hover {
     outline: 2px solid #0ad9fa; }
 
-.form button {
+form button {
   font-weight: 600;
   font-size: 15px;
   line-height: 21px;
@@ -315,9 +316,9 @@ img {
   border-radius: 6px;
   padding: 15px;
   border: 1px solid #c9ccd4; }
-  .form button:hover {
+  form button:hover {
     background-color: #0ad9fa; }
-  .form button:active {
+  form button:active {
     background-color: rgba(10, 217, 250, 0.7); }
 
 .toggle {
@@ -417,6 +418,7 @@ img {
   font-size: 22px;
   line-height: 34px;
   text-align: center;
+  letter-spacing: -0.7px;
   margin-top: 20px;
   margin-right: 40px;
   margin-bottom: 20px; }
@@ -426,14 +428,17 @@ img {
     .facts li {
       width: 47%;
       padding-bottom: 50px;
-      margin-right: 17px; } }
+      padding-left: 10px;
+      margin-right: 17px;
+      margin-top: 16px;
+      margin-bottom: 25px; } }
   @media (max-width: 767px) {
     .facts li {
       width: 100%;
       max-width: 288px;
       font-size: 18px;
       line-height: 34px;
-      margin: 0 0 39px 0;
+      margin: 0 0 38px 0;
       padding: 0 8px 50px; } }
   .facts li::before {
     position: absolute;
@@ -441,7 +446,7 @@ img {
     content: "0" counter(list);
     top: -52px;
     left: 50%;
-    transform: translateX(-38%);
+    transform: translateX(-33%);
     font-weight: bold;
     font-size: 28px;
     line-height: 38px;
@@ -453,14 +458,24 @@ img {
 .facts p {
   margin: 0; }
 
+@media (max-width: 1023px) {
+  .facts br {
+    display: none; } }
+
 .footer__wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  padding-bottom: 98px; }
+  justify-content: space-between;
+  padding-bottom: 98px;
+  width: 555px;
+  margin: 0 auto; }
   @media (max-width: 1023px) {
     .footer__wrapper {
       padding-bottom: 50px; } }
+  @media (max-width: 767px) {
+    .footer__wrapper {
+      width: 100%;
+      justify-content: center; } }
 
 .footer__link {
   position: relative;
@@ -470,13 +485,14 @@ img {
   font-size: 16px;
   line-height: 22px;
   color: rgba(0, 0, 0, 0.5);
-  padding: 0 0 0 25px; }
-  .footer__link:not(:last-child) {
-    margin-right: 103px; }
-    @media (max-width: 767px) {
-      .footer__link:not(:last-child) {
-        margin-right: 0;
-        margin-bottom: 22px; } }
+  padding: 0 15px 0 37px; }
+  @media (max-width: 767px) {
+    .footer__link--mail {
+      padding: 0 0 0 42px; } }
+  @media (max-width: 767px) {
+    .footer__link:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 24px; } }
   .footer__link:hover {
     color: #0ad9fa; }
   .footer__link:active {
@@ -485,7 +501,7 @@ img {
     position: absolute;
     content: "";
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
     left: 0; }
   .footer__link--tel::before {
     width: 22px;
@@ -507,7 +523,7 @@ img {
       margin-bottom: 20px; } }
   @media (max-width: 767px) {
     .contacts {
-      margin-bottom: 27px; } }
+      margin-bottom: 26px; } }
 
 .contacts h2 {
   font-weight: 600;
