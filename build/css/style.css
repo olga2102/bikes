@@ -254,28 +254,37 @@ img {
       text-align: center;
       padding: 0 20px; } }
 
-form {
+.sale__container {
+  width: 38.5%;
+  padding-left: 10px; }
+  @media (max-width: 1023px) {
+    .sale__container {
+      width: 43%;
+      padding-left: 0; } }
+  @media (max-width: 767px) {
+    .sale__container {
+      width: 100%; } }
+
+.sale__container form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 37.5%;
   margin-left: auto;
   padding-top: 5px; }
   @media (max-width: 1023px) {
-    form {
-      margin: 8.5% auto 0;
-      width: 43%; } }
+    .sale__container form {
+      margin: 19.5% auto 0; } }
   @media (max-width: 767px) {
-    form {
+    .sale__container form {
       margin: 70px auto 0;
       width: 100%;
       max-width: 400px;
       padding: 0 16px; } }
 
-form label {
+.sale__container label {
   width: 100%; }
 
-form p {
+.sale__container p {
   color: white;
   font-weight: 600;
   font-size: 17px;
@@ -286,17 +295,17 @@ form p {
   margin-bottom: 20px;
   margin-top: 0; }
   @media (max-width: 1023px) {
-    form p {
+    .sale__container p {
       font-size: 18px;
       line-height: 28px;
       color: black;
       margin-bottom: 30px; } }
   @media (max-width: 767px) {
-    form p {
+    .sale__container p {
       padding: 0 5%;
       margin-bottom: 20px; } }
 
-form input {
+.sale__container input {
   width: 100%;
   font-size: 15px;
   line-height: 24px;
@@ -304,10 +313,10 @@ form input {
   padding: 13px 30px 10px;
   border: 1px solid #c9ccd4;
   border-radius: 6px; }
-  form input:hover {
+  .sale__container input:hover {
     outline: 2px solid #0ad9fa; }
 
-form button {
+.sale__container button {
   font-weight: 600;
   font-size: 15px;
   line-height: 21px;
@@ -316,9 +325,9 @@ form button {
   border-radius: 6px;
   padding: 15px;
   border: 1px solid #c9ccd4; }
-  form button:hover {
+  .sale__container button:hover {
     background-color: #0ad9fa; }
-  form button:active {
+  .sale__container button:active {
     background-color: rgba(10, 217, 250, 0.7); }
 
 .toggle {
@@ -414,12 +423,12 @@ form button {
 .facts li {
   position: relative;
   max-width: 270px;
-  width: 22%;
+  width: 22.3%;
   font-size: 22px;
   line-height: 34px;
   text-align: center;
   letter-spacing: -0.7px;
-  margin-top: 20px;
+  margin-top: 22px;
   margin-right: 40px;
   margin-bottom: 20px; }
   .facts li:last-child {
@@ -430,8 +439,10 @@ form button {
       padding-bottom: 50px;
       padding-left: 10px;
       margin-right: 17px;
-      margin-top: 16px;
-      margin-bottom: 25px; } }
+      margin-top: 18px;
+      margin-bottom: 25px; }
+      .facts li:nth-child(2n) {
+        margin-right: 0; } }
   @media (max-width: 767px) {
     .facts li {
       width: 100%;
@@ -446,7 +457,7 @@ form button {
     content: "0" counter(list);
     top: -52px;
     left: 50%;
-    transform: translateX(-33%);
+    transform: translateX(-50%);
     font-weight: bold;
     font-size: 28px;
     line-height: 38px;
@@ -457,10 +468,6 @@ form button {
 
 .facts p {
   margin: 0; }
-
-@media (max-width: 1023px) {
-  .facts br {
-    display: none; } }
 
 .footer__wrapper {
   display: flex;
@@ -597,7 +604,7 @@ form button {
   padding: 150px 0 125px; }
   @media (max-width: 1023px) {
     .types {
-      padding: 50px 0 50px; } }
+      padding: 45px 0 50px; } }
   @media (max-width: 767px) {
     .types {
       padding: 45px 0 36px; } }
