@@ -1,5 +1,5 @@
 .facts {
-  margin-bottom: 133px;
+  margin-bottom: 110px;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 0;
@@ -54,9 +54,9 @@
   line-height: 34px;
   text-align: center;
   letter-spacing: -0.7px;
-  margin-top: 22px;
+  padding-top: 22px;
   margin-right: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 
   &:last-child {
     margin-right: 0;
@@ -67,7 +67,7 @@
     padding-bottom: 50px;
     padding-left: 10px;
     margin-right: 17px;
-    margin-top: 18px;
+    padding-top: 18px;
     margin-bottom: 25px;
 
     &:nth-child(2n) {
@@ -88,7 +88,7 @@
     position: absolute;
     counter-increment: list;
     content: "0" counter(list);
-    top: -52px;
+    top: -30px;
     left: 50%;
     transform: translateX(-50%);
     font-weight: bold;

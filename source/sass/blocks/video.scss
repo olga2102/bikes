@@ -1,5 +1,5 @@
 .video {
-  position: relative;
+  // position: relative;
   background: linear-gradient(to bottom, $background-black 88%, $basic-white 12%);
   padding-top: 120px;
   margin-bottom: 150px;
@@ -73,9 +73,9 @@
   height: 65px;
   background-color: $blue;
   border-radius: 50%;
-  top: 64%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 
   @media (max-width: $tablet-width) {
     width: 90px;
@@ -85,7 +85,6 @@
   @media (max-width: $mobile-width) {
     width: 65px;
     height: 65px;
-    top: 75%;
   }
 
   &::before {
@@ -118,4 +117,8 @@
   &:active {
     background-color: $blue-active;
   }
+}
+
+.video div {
+  position: relative;
 }

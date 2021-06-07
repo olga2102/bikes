@@ -1,13 +1,13 @@
 .types {
   background-color: $background-blue;
-  padding: 150px 0 125px;
+  padding: 150px 0 111px;
 
   @media (max-width: $tablet-width) {
-    padding: 45px 0 50px;
+    padding: 45px 0 34px;
   }
 
   @media (max-width: $mobile-width) {
-    padding: 45px 0 36px;
+    padding: 45px 0 23px;
   }
 }
 
@@ -50,20 +50,21 @@
 .types__item {
   position: relative;
   z-index: 1;
+  margin-bottom: 15px;
 
-  &:not(:nth-child(3n)) {
-    margin-right: 4%;
-
-    @media (max-width: $tablet-width) {
-      margin-right: 0;
-    }
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
   }
 
   &:nth-child(2n) {
     margin-top: 39px;
+    margin-left: 3.4%;
+    margin-right: 3.4%;
 
     @media (max-width: $tablet-width) {
       margin-top: 0;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 
@@ -88,12 +89,6 @@
       @media (max-width: $mobile-width) {
         margin-right: 0;
       }
-    }
-  }
-
-  &:last-child {
-    @media (max-width: $tablet-width) {
-      margin-right: 0;
     }
   }
 

@@ -10,6 +10,7 @@
     justify-content: center;
     align-items: center;
     min-height: auto;
+    max-width: 100%;
   }
 }
 
@@ -40,7 +41,7 @@
     &--picture {
       background-image: url("../img/bike_tablet.jpg");
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: cover;
       background-color: $background-grey;
       min-height: 340px;
 
@@ -188,6 +189,7 @@
   border-radius: 6px;
   padding: 15px;
   border: 1px solid $border-grey;
+  cursor: pointer;
 
   &:hover {
     background-color: $blue-hover;

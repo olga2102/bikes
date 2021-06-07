@@ -13,6 +13,7 @@
   @media (max-width: $mobile-width) {
     width: 100%;
     justify-content: center;
+    padding-bottom: 28px;
   }
 }
 
@@ -25,6 +26,7 @@
   line-height: 22px;
   color: $link-grey;
   padding: 0 15px 0 37px;
+  margin-bottom: 15px;
 
   &--mail {
     @media (max-width: $mobile-width) {
@@ -32,11 +34,8 @@
     }
   }
 
-  &:not(:last-child) {
-    @media (max-width: $mobile-width) {
-      margin-right: 0;
-      margin-bottom: 24px;
-    }
+  @media (max-width: $mobile-width) {
+    margin-bottom: 24px;
   }
 
   &:hover {
