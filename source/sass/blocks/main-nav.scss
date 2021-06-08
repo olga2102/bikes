@@ -4,11 +4,9 @@
   @media (max-width: $tablet-width) {
     display: none;
     width: 100%;
-    height: 100vh;
     padding: 0;
     margin-bottom: 0;
     margin-top: 75px;
-    overflow: auto;
   }
 
   &--open {
@@ -32,26 +30,23 @@
 .main-nav ul {
   @include list-reset;
   position: relative;
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   justify-content: start;
   padding: 20px 20px 15px;
+  grid-template-columns: auto auto auto auto;
+  gap: 0 129px;
 
   @media (max-width: $tablet-width) {
+    display: flex;
     flex-direction: column;
     padding: 0;
+    flex-wrap: nowrap;
+    height: 100%;
   }
 }
 
 .main-nav li {
-  &:not(:last-child) {
-    margin-right: 129px;
-
-    @media (max-width: $tablet-width) {
-      margin-right: 0;
-    }
-  }
-
   @media (max-width: $tablet-width) {
     position: relative;
     background-color: $menu-grey;
