@@ -1,2 +1,8 @@
 const ghPages = require('gh-pages');
-ghPages.publish("build", function(err) {});
+const gulp = require("gulp");
+// ghPages.publish("build", function(err) {});
+
+gulp.task('deploy', function() {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
+});
